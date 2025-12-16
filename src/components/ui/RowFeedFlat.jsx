@@ -5,9 +5,18 @@ import { useRouter } from "next/navigation";
 import truncateText from "../helpers/truncateText";
 
 const categories = [
-  "Green Finance & ESG",
-  "Sustainable Living / Lifestyle",
-  "Climate Tech & Energy",
+    {
+        name: "Green Finance & ESG",
+        category: "green-finance-sl",
+    },
+    {
+        name: "Climate Tech & Energy",
+        category: "climate-tech-sl",
+    },
+    {
+        name: "Sustainable Living / Lifestyle / Environment",
+        category: "sustainable-living",
+    }
 ];
 
 const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], loading }) => {
@@ -22,11 +31,11 @@ const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], loading }) => {
 
   function categoryBadgeClass(category = "") {
     switch (category.toLowerCase()) {
-      case "green finance & esg":
+      case "green-finance-sl":
         return "bg-[#2F4F3E] text-white";
-      case "sustainable living / lifestyle":
+      case "sustainable-living":
         return "bg-[#16A34A] text-white";
-      case "climate tech & energy":
+      case "climate-tech-sl":
         return "bg-[#22C55E] text-white";
       default:
         return "bg-gray-400 text-white";
@@ -97,13 +106,13 @@ const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], loading }) => {
               </button>
               {categories.map((cat) => (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
+                  key={cat.category}
+                  onClick={() => setSelectedCategory(cat.category)}
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    selectedCategory === cat ? "bg-[#2F4F3E] text-white" : "bg-gray-200 text-gray-700"
+                    selectedCategory === cat.category ? "bg-[#2F4F3E] text-white" : "bg-gray-200 text-gray-700"
                   }`}
                 >
-                  {cat}
+                  {cat.name}
                 </button>
               ))}
             </div>
