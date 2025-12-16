@@ -115,7 +115,7 @@ const CookieBanner = () => {
         enableDeclineButton={false}
         buttonText=""
         style={{
-          background: "#3A82F7",
+          background: "#2F4F3E",
           color: "#fff",
           fontSize: "14px",
           padding: "10px 20px",
