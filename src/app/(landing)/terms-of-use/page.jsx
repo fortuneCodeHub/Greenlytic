@@ -3,10 +3,11 @@ import Header from "@/components/ui/Header";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms of Use - Greenlytic: Data-Driven Sustainability & Eco Insights",
+  title: "Terms of Use - Greenlytic: Sustainability, Climate & DIY Insights",
   description:
-    "Review the terms of use for Greenlytic. Learn about your rights, responsibilities, and the policies governing your use of our website and services.",
+    "Review the terms of use for Greenlytic. Understand your rights, responsibilities, and the policies guiding your use of our content and resources on green finance, ESG, climate tech, sustainable living, and DIY home improvement.",
 };
+
 
 export default function TermsOfUsePage() {
   return (

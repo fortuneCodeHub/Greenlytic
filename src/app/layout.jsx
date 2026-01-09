@@ -22,12 +22,12 @@ export const metadata = {
   metadataBase: new URL("https://www.greenlytic.com/"),
 
   title: {
-    default: "Greenlytic — Sustainability, Green Finance & Climate Intelligence",
+    default: "Greenlytic — Sustainability, Green Finance & Eco Innovation",
     template: "%s — Greenlytic"
   },
 
   description:
-    "Greenlytic is a data-led sustainability journal covering green finance, ESG metrics, climate risk, energy technology, and eco-conscious living. We explore how capital, policy, and innovation are shaping a resilient, low-carbon future.",
+    "Greenlytic is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.",
 
   keywords: [
     "Greenlytic",
@@ -53,13 +53,29 @@ export const metadata = {
     "sustainable living",
     "long term resilience",
     "climate policy insights",
-    "environmental data analytics"
+    "environmental data analytics",
+    // DIY Home Improvement Keywords
+    "DIY home projects",
+    "home improvement ideas",
+    "eco friendly home upgrades",
+    "sustainable DIY projects",
+    "green home renovation",
+    "energy efficient home",
+    "home gardening tips",
+    "upcycling furniture",
+    "recycling at home",
+    "eco friendly interior design",
+    "DIY sustainable lifestyle",
+    "green home solutions",
+    "smart home energy savings",
+    "low carbon home improvements",
+    "environmentally conscious DIY"
   ],
 
   openGraph: {
-    title: "Greenlytic — Sustainability & Climate Intelligence",
+    title: "Greenlytic — Sustainability, Climate Tech & DIY Home Innovation",
     description:
-      "Greenlytic examines sustainability through data, finance, and innovation. From ESG analysis to climate technology and eco-conscious living, we decode the systems shaping a resilient future.",
+      "Greenlytic explores sustainability through finance, ESG metrics, climate technology, and practical DIY home improvements. We decode how innovation, data, and eco-conscious choices create a resilient future.",
     url: "https://www.greenlytic.com/",
     siteName: "Greenlytic",
     images: [
@@ -67,7 +83,7 @@ export const metadata = {
         // url: "/assets/greenlytic-og.png",
         width: 1200,
         height: 630,
-        alt: "Greenlytic — Sustainability, ESG & Climate Tech Journal"
+        alt: "Greenlytic — Sustainability, ESG, Climate Tech & DIY Home Journal"
       }
     ],
     locale: "en_US",
@@ -76,9 +92,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Greenlytic — Sustainability & Climate Intelligence",
+    title: "Greenlytic — Sustainability, Climate Tech & DIY Home Innovation",
     description:
-      "A data-driven sustainability publication covering green finance, ESG, climate risk, energy technology, and eco-conscious living.",
+      "A data-driven sustainability publication covering green finance, ESG, climate risk, energy technology, eco-conscious living, and DIY home improvement.",
     // images: ["/assets/greenlytic-og.png"],
     creator: "@greenlytic"
   },
@@ -87,6 +103,7 @@ export const metadata = {
     canonical: "https://www.greenlytic.com/"
   }
 };
+
 
 
 

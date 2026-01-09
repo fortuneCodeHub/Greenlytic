@@ -18,7 +18,7 @@ const Footer = () => {
           </Link>
 
           <p className="mt-5 text-sm md:text-base text-gray-600 leading-relaxed max-w-sm">
-          Greenlytic is a sustainability-focused journal blending data-driven insights with practical eco-living. We cover green finance, ESG metrics, climate innovation, and energy technology, while exploring how thoughtful choices and emerging systems can create a greener, more resilient future.
+          Greenlytic is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.
           </p>
         </div>
 

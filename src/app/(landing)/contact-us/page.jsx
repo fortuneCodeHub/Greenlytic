@@ -1,10 +1,11 @@
 import ContactPageContent from "@/components/ui/ContactPageContent";
 
 export const metadata = {
-  title: "Contact Us - Greenlytic: Data-Driven Sustainability & Eco Insights",
+  title: "Contact Us - Greenlytic: Sustainability, Climate & DIY Insights",
   description:
-    "Get in touch with the Greenlytic team. Whether it’s feedback, partnership, or inquiry — we’d love to hear from you.",
+    "Connect with the Greenlytic team. Whether you have questions, partnership ideas, or feedback on green finance, ESG, climate tech, DIY home projects, or sustainable living, we’d love to hear from you.",
 };
+
 
 export default function ContactPage() {
   

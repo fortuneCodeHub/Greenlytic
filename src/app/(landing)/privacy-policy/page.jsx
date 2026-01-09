@@ -3,9 +3,9 @@ import Header from "@/components/ui/Header";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Privacy Policy - Greenlytic: Data-Driven Sustainability & Eco Insights",
-    description:
-      "Read the Greenlytic Privacy Policy to understand how we collect, use, and protect your data across our sustainability and eco-focused articles.",
+  title: "Privacy Policy - Greenlytic: Sustainability, Climate & DIY Insights",
+  description:
+    "Read Greenlytic’s Privacy Policy to learn how we collect, use, and protect your data while providing insights on green finance, ESG, climate tech, energy innovation, sustainable living, and DIY home improvement.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
                             1. Introduction
                         </h2>
                         <p>
-                            Welcome to <strong className="text-[#2F4F3E]">Greenlytic</strong> — a data-led sustainability and eco insights blog. This Privacy Policy explains how we handle your personal
+                            Welcome to <strong className="text-[#2F4F3E]">Greenlytic</strong> — is a sustainability-focused platform blending research, data, and practical guidance. This Privacy Policy explains how we handle your personal
                             information when you visit our website, subscribe to our updates, or interact with our
                             content and services.
                         </p>

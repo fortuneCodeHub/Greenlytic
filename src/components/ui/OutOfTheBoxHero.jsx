@@ -3,27 +3,38 @@
 import { useEffect, useState } from "react";
 
 const HERO_CONTENT = [
-    {
-      image: "/assets/hero/green-city.jpg",
-      title: "Where Data Meets Green Living",
-      subtitle: "Insights on sustainable finance, ESG metrics, and practical eco-solutions for a resilient future.",
-    },
-    {
-      image: "/assets/hero/nature-light.webp",
-      title: "Sustainability, Measured & Meaningful",
-      subtitle: "Analyzing ESG scores, climate data, and emerging technologies shaping greener lifestyles.",
-    },
-    {
-      image: "/assets/hero/forest.jpg",
-      title: "The Economics of a Greener Tomorrow",
-      subtitle: "How finance, policy, and innovation are driving sustainable systems and eco-conscious choices.",
-    },
-    {
-      image: "/assets/hero/eco-home.jpg",
-      title: "From Metrics to Real-World Impact",
-      subtitle: "Exploring sustainable investing, energy innovation, and everyday practices for a healthier planet.",
-    },
+  {
+    image: "/assets/hero/green-city.jpg",
+    title: "Where Data Meets Green Living",
+    subtitle: "Insights on sustainable finance, ESG metrics, and practical eco-solutions for a resilient future.",
+  },
+  {
+    image: "/assets/hero/nature-light.webp",
+    title: "Sustainability, Measured & Meaningful",
+    subtitle: "Analyzing ESG scores, climate data, and emerging technologies shaping greener lifestyles.",
+  },
+  {
+    image: "/assets/hero/forest.jpg",
+    title: "The Economics of a Greener Tomorrow",
+    subtitle: "How finance, policy, and innovation are driving sustainable systems and eco-conscious choices.",
+  },
+  {
+    image: "/assets/hero/eco-home.jpg",
+    title: "From Metrics to Real-World Impact",
+    subtitle: "Exploring sustainable investing, energy innovation, and everyday practices for a healthier planet.",
+  },
+  {
+    image: "/assets/hero/diy-home.jpg",
+    title: "Sustainable DIY for Every Home",
+    subtitle: "Practical guides and eco-friendly tips to transform your space while reducing waste and energy use.",
+  },
+  {
+    image: "/assets/hero/green-renovation.webp",
+    title: "DIY Projects with a Purpose",
+    subtitle: "Step-by-step home improvement ideas that merge creativity, sustainability, and smart living.",
+  }
 ];
+
   
   
 

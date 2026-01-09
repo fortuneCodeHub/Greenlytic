@@ -10,6 +10,10 @@ const categories = [
         category: "green-finance-sl",
     },
     {
+        name: "DIY Home Improvement",
+        category: "diy-home-sl",
+    },
+    {
         name: "Climate Tech & Energy",
         category: "climate-tech-sl",
     },
@@ -37,6 +41,8 @@ const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], loading }) => {
         return "bg-[#16A34A] text-white";
       case "climate-tech-sl":
         return "bg-[#22C55E] text-white";
+      case "diy-home-sl":
+        return "bg-amber-900 text-white";
       default:
         return "bg-gray-400 text-white";
     }

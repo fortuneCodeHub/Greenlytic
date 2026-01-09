@@ -31,7 +31,7 @@ export const getPosts = createAsyncThunk("posts/getPosts",
 export const getFrontendPosts = createAsyncThunk("posts/getPosts", 
     async (_, { rejectWithValue } ) => {
         try {
-            const res = await fetch('https://www.yieldnvest.com/api/auth/posts/sustainable-living')
+            const res = await fetch('https://www.yieldnvest.com/api/auth/posts/greenlytic')
 
             if (!res.ok) {
                 // maybe parse JSON safely
