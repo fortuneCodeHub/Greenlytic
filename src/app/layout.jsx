@@ -118,6 +118,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="TradingFarms RSS Feed"
+          href="/rss.xml"
+        />
         {/* Google tag (gtag.js) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-51ERW1TF74`}

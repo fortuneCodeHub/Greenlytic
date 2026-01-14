@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /api/protected
+Disallow: /access
+
+Sitemap: https://www.tradingfarms.online/sitemap.xml
+Sitemap: https://www.tradingfarms.online/rss.xml

@@ -6,7 +6,7 @@ export async function getPostById(slug) {
   try {
     const post = await Post.findOne({ 
       slug,
-      category: { $nin: ["finance", "tech", "insurance", "photography", "sustainable-living", "books-literature", "skill-dev-bl"] }
+      category: { $nin: ["art-design","finance", "tech", "insurance", "photography", "sustainable-living", "books-literature", "skill-dev-bl"] }
     }).lean(); // <-- lean() returns plain JS object
     if (!post) return null;
 
@@ -32,7 +32,7 @@ export async function getAllPosts() {
   await connectToDB();
   try {
     const posts = await Post.find({
-      category: { $nin: ["finance", "tech", "insurance", "photography", "sustainable-living", "books-literature", "skill-dev-bl"] }
+      category: { $nin: ["art-design","finance", "tech", "insurance", "photography", "sustainable-living", "books-literature", "skill-dev-bl"] }
     }).sort({ createdAt: -1 }).lean(); // get all posts, newest first
 
     // Convert ObjectIds and Dates to strings for each post

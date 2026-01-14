@@ -18,14 +18,14 @@ const BlogPost = ({ post, loading, posts }) => {
 
   function categoryBadgeClass(category) {
     switch (category?.toLowerCase()) {
-      case "finance":
-        return "bg-[#0EA5A4]";
-      case "tech":
-        return "bg-[#2563EB]";
-      case "insurance":
-        return "bg-yellow-500";
-      case "law":
-        return "bg-purple-600";
+      case "green-finance-sl": 
+        return "bg-[#2F4F3E] text-white";
+      case "sustainable-living": 
+        return "bg-[#16A34A] text-white";
+      case "climate-tech-sl": 
+        return "bg-[#22C55E] text-white";
+      case "diy-home-sl": 
+        return "bg-amber-900 text-white";
       default:
         return "bg-gray-500";
     }
