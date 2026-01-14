@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import ReduxLandingProvider from "@/components/hooks/ReduxLandingProvider";
 import Script from "next/script";
 import AnalyticsTracker from "@/components/ui/AnalyticsTracker";
+// import { GoogleAnalytics } from '@next/third-parties/google';
 import CookieBanner from "@/components/ui/CookieBanner";
 
 const geistSans = Geist({
@@ -19,18 +20,18 @@ const geistMono = Geist_Mono({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://www.greenlytic.com/"),
+  metadataBase: new URL("https://www.tradingfarms.online/"),
 
   title: {
-    default: "Greenlytic — Sustainability, Green Finance & Eco Innovation",
-    template: "%s — Greenlytic"
+    default: "TradingFarms — Sustainability, Green Finance & Eco Innovation",
+    template: "%s — TradingFarms"
   },
 
   description:
-    "Greenlytic is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.",
+    "TradingFarms is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.",
 
   keywords: [
-    "Greenlytic",
+    "TradingFarms",
     "sustainability blog",
     "green finance",
     "ESG investing",
@@ -73,17 +74,17 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "Greenlytic — Sustainability, Climate Tech & DIY Home Innovation",
+    title: "TradingFarms — Sustainability, Climate Tech & DIY Home Innovation",
     description:
-      "Greenlytic explores sustainability through finance, ESG metrics, climate technology, and practical DIY home improvements. We decode how innovation, data, and eco-conscious choices create a resilient future.",
-    url: "https://www.greenlytic.com/",
-    siteName: "Greenlytic",
+      "TradingFarms explores sustainability through finance, ESG metrics, climate technology, and practical DIY home improvements. We decode how innovation, data, and eco-conscious choices create a resilient future.",
+    url: "https://www.tradingfarms.online/",
+    siteName: "TradingFarms",
     images: [
       {
-        // url: "/assets/greenlytic-og.png",
+        // url: "/assets/TradingFarms-og.png",
         width: 1200,
         height: 630,
-        alt: "Greenlytic — Sustainability, ESG, Climate Tech & DIY Home Journal"
+        alt: "TradingFarms — Sustainability, ESG, Climate Tech & DIY Home Journal"
       }
     ],
     locale: "en_US",
@@ -92,15 +93,15 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Greenlytic — Sustainability, Climate Tech & DIY Home Innovation",
+    title: "TradingFarms — Sustainability, Climate Tech & DIY Home Innovation",
     description:
       "A data-driven sustainability publication covering green finance, ESG, climate risk, energy technology, eco-conscious living, and DIY home improvement.",
-    // images: ["/assets/greenlytic-og.png"],
-    creator: "@greenlytic"
+    // images: ["/assets/TradingFarms-og.png"],
+    creator: "@TradingFarms"
   },
 
   alternates: {
-    canonical: "https://www.greenlytic.com/"
+    canonical: "https://www.tradingfarms.online/"
   }
 };
 
@@ -119,7 +120,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google tag (gtag.js) */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-H1QYN3T4M0`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-51ERW1TF74`}
           strategy="afterInteractive"
         />
         {/* <Script id="google-analytics" strategy="afterInteractive">
@@ -137,7 +138,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-H1QYN3T4M0');
+            gtag('config', 'G-51ERW1TF74');
           `}
         </Script>
       </head>
@@ -148,6 +149,7 @@ export default function RootLayout({ children }) {
         <ReduxLandingProvider>
           {children}
         </ReduxLandingProvider>
+        {/* <GoogleAnalytics gaId="G-51ERW1TF74" /> */}
 
         <CookieBanner />
       </body>

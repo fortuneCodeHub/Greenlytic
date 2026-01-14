@@ -14,11 +14,11 @@ const Footer = () => {
             href="/"
             className="text-3xl md:text-4xl font-extrabold text-[#2F4F3E] tracking-wide"
           >
-            Greenlytic
+            TradingFarms
           </Link>
 
           <p className="mt-5 text-sm md:text-base text-gray-600 leading-relaxed max-w-sm">
-          Greenlytic is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.
+          TradingFarms is a data-driven sustainability journal covering green finance, ESG metrics, climate risk, energy technology, eco-conscious living, and DIY home improvement. We explore how finance, policy, technology, and practical home solutions are shaping a resilient, low-carbon future.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Greenlytic. All rights reserved.
+        © {new Date().getFullYear()} TradingFarms. All rights reserved.
       </div>
     </footer>
   );

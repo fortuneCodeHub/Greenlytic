@@ -3,9 +3,9 @@ import Header from "@/components/ui/Header";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms of Use - Greenlytic: Sustainability, Climate & DIY Insights",
+  title: "Terms of Use - TradingFarms: Sustainability, Climate & DIY Insights",
   description:
-    "Review the terms of use for Greenlytic. Understand your rights, responsibilities, and the policies guiding your use of our content and resources on green finance, ESG, climate tech, sustainable living, and DIY home improvement.",
+    "Review the terms of use for TradingFarms. Understand your rights, responsibilities, and the policies guiding your use of our content and resources on green finance, ESG, climate tech, sustainable living, and DIY home improvement.",
 };
 
 
@@ -29,12 +29,12 @@ export default function TermsOfUsePage() {
           <div className="space-y-8 text-lg text-green-100">
             <h2 className="text-2xl font-semibold text-gray-800">1. Introduction</h2>
             <p>
-              Welcome to Greenlytic! These Terms of Use govern your use of our website and services. By accessing and using this website, you agree to comply with these terms.
+              Welcome to TradingFarms! These Terms of Use govern your use of our website and services. By accessing and using this website, you agree to comply with these terms.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800">2. Acceptance of Terms</h2>
             <p>
-              By using Greenlytic, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use our website.
+              By using TradingFarms, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use our website.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800">3. User Obligations</h2>
@@ -49,12 +49,12 @@ export default function TermsOfUsePage() {
 
             <h2 className="text-2xl font-semibold text-gray-800">5. Intellectual Property</h2>
             <p>
-              All content on Greenlytic, including articles, graphics, logos, and designs, are the property of Greenlytic and protected by intellectual property laws.
+              All content on TradingFarms, including articles, graphics, logos, and designs, are the property of TradingFarms and protected by intellectual property laws.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800">6. Limitation of Liability</h2>
             <p>
-              Greenlytic is not liable for any damages resulting from the use or inability to use our website or services. We are not responsible for any third-party content linked to or referenced on our platform.
+              TradingFarms is not liable for any damages resulting from the use or inability to use our website or services. We are not responsible for any third-party content linked to or referenced on our platform.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800">7. Changes to Terms</h2>
@@ -66,17 +66,17 @@ export default function TermsOfUsePage() {
             <p>
               If you have any questions regarding these Terms of Use, please contact us at{" "}
               <a
-                href="mailto:contact@greenlytic.com"
-                className="text-gray-800 hover:underline"
+                href="mailto:contactyieldnvest@gmail.com"
+                className="text-[#2F4F3E] hover:underline"
               >
-                contact@greenlytic.com
+                contactyieldnvest@gmail.com
               </a>
               . You can also review our <a href="/privacy-policy" className="text-gray-800 hover:underline">Privacy Policy</a> for more information.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800">9. Advertising & Third-Party Cookies</h2>
             <p>
-              Greenlytic uses Google AdSense and other third-party advertising partners. 
+              TradingFarms uses Google AdSense and other third-party advertising partners. 
               These partners may use cookies, including Google’s DART cookie, to display 
               personalized ads based on your visits to our website and other websites. 
               You may opt out of personalized advertising by visiting Google’s Ad Settings page:

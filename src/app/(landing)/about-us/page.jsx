@@ -3,9 +3,9 @@ import Header from "@/components/ui/Header";
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us - Greenlytic: Sustainability, Climate & DIY Insights",
+  title: "About Us - TradingFarms: Sustainability, Climate & DIY Insights",
   description:
-    "Discover Greenlytic — your data-driven sustainability hub exploring green finance, ESG, climate tech, energy innovation, and eco-friendly DIY solutions. Learn, act, and live greener.",
+    "Discover TradingFarms — your data-driven sustainability hub exploring green finance, ESG, climate tech, energy innovation, and eco-friendly DIY solutions. Learn, act, and live greener.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
               href="/"
               className="relative lg:text-5xl md:text-4xl ms-5 text-2xl font-extrabold"
             >
-              <span className="text-white tracking-wide">Greenlytic</span>
+              <span className="text-white tracking-wide">TradingFarms</span>
             </Link>
           </h1>
 
@@ -34,20 +34,20 @@ export default function AboutPage() {
 
         <div className="space-y-10 text-lg leading-relaxed text-green-100 text-center max-w-4xl mx-auto">
           <p>
-            <strong className="text-white">Greenlytic</strong> is a sustainability-focused platform blending research, data, and practical guidance. 
+            <strong className="text-white">TradingFarms</strong> is a sustainability-focused platform blending research, data, and practical guidance. 
             We explore the intersection of finance, energy, climate innovation, and everyday eco-conscious living.
           </p>
 
           <p>
-            From ESG investing and green finance to climate tech, renewable energy, and DIY eco-friendly home solutions, Greenlytic equips readers to make impactful, sustainable choices.
+            From ESG investing and green finance to climate tech, renewable energy, and DIY eco-friendly home solutions, TradingFarms equips readers to make impactful, sustainable choices.
           </p>
 
           <div className="border-l-4 border-[#243D31] pl-6 italic text-green-200">
-            “Where data meets action — Greenlytic decodes metrics, technology, and practical solutions for a greener, smarter future.”
+            “Where data meets action — TradingFarms decodes metrics, technology, and practical solutions for a greener, smarter future.”
           </div>
 
           <p>
-            Whether you are a sustainability professional, climate-conscious homeowner, or eco-lifestyle enthusiast, Greenlytic offers research-backed, actionable insights.
+            Whether you are a sustainability professional, climate-conscious homeowner, or eco-lifestyle enthusiast, TradingFarms offers research-backed, actionable insights.
           </p>
 
           <p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
             href="/"
             className="inline-block bg-[#243D31] text-white px-8 py-3 rounded-full font-medium hover:bg-[#1E362A] transition-colors"
           >
-            Explore Greenlytic
+            Explore TradingFarms
           </a>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function AboutPage() {
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Meet Our Chief Editor</h2>
           <p className="text-lg text-gray-800">
-            The mind guiding <span className="font-semibold">Greenlytic</span> — also known as 
+            The mind guiding <span className="font-semibold">TradingFarms</span> — also known as 
             <span className="ms-2 font-semibold text-[#243D31]">“The Green Lord.”</span>
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center gap-4 md:w-1/3">
               <img
                 src="/assets/images/mark-peter1.jpg" 
-                alt="Peter Mark - Chief Editor of Greenlytic"
+                alt="Peter Mark - Chief Editor of TradingFarms"
                 className="w-40 h-40 object-cover rounded-full shadow-md"
               />
               <img
@@ -96,7 +96,7 @@ export default function AboutPage() {
             {/* Author Text */}
             <div className="md:w-2/3 space-y-6 text-lg leading-relaxed">
               <p>
-                <strong>Peter Mark</strong> is the Chief Editor of <strong>Greenlytic</strong>, guiding the platform’s editorial vision with deep expertise in sustainability, green finance, climate tech, and energy innovation. 
+                <strong>Peter Mark</strong> is the Chief Editor of <strong>TradingFarms</strong>, guiding the platform’s editorial vision with deep expertise in sustainability, green finance, climate tech, and energy innovation. 
                 His mission is to make complex sustainability data actionable and inspire eco-friendly living through research, DIY guidance, and practical insights.
               </p>
 
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                <strong>Chief Editor – Greenlytic</strong><br />
+                <strong>Chief Editor – TradingFarms</strong><br />
                 Peter leads content strategy, ensuring every article on green finance, DIY home improvement, climate tech, and sustainable living is accurate, actionable, and beginner-friendly.
               </p>
 

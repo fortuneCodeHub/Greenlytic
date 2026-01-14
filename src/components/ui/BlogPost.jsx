@@ -6,14 +6,15 @@ import { Bookmark, Share2 } from "lucide-react";
 import { formatDate } from "../helpers/formatDate";
 import RelatedPosts from "./RelatedPosts";
 import AccordionBlock from "./AccordionBlock";
+// import ExternalTitleLinks from "./ExternalTitleLinks";
 
 const BlogPost = ({ post, loading, posts }) => {
   const router = useRouter();
   const [bookmarked, setBookmarked] = useState(false);
 
-  // useEffect(() => {
-    // console.log(post);
-  // }, [post])
+  useEffect(() => {
+    console.log(post);
+  }, [post])
 
   function categoryBadgeClass(category) {
     switch (category?.toLowerCase()) {
@@ -56,8 +57,7 @@ const BlogPost = ({ post, loading, posts }) => {
           <h2
             key={block.id}
             className="text-2xl font-semibold text-gray-900 mt-8 mb-4"
-            dangerouslySetInnerHTML={{ __html: block.content }}
-          />
+          >{block.content}</h2>
         );
 
       case "heading3":
@@ -65,8 +65,8 @@ const BlogPost = ({ post, loading, posts }) => {
           <h3
             key={block.id}
             className="text-xl font-semibold text-gray-800 mt-6 mb-3"
-            dangerouslySetInnerHTML={{ __html: block.content }}
-          />
+            // dangerouslySetInnerHTML={{ __html: block.content }}
+          >{block.content}</h3>
         );
   
       case "heading4":
@@ -74,18 +74,20 @@ const BlogPost = ({ post, loading, posts }) => {
           <h4
             key={block.id}
             className="text-lg font-medium text-gray-700 mt-4 mb-2"
-            dangerouslySetInnerHTML={{ __html: block.content }}
-          />
+            // dangerouslySetInnerHTML={{ __html: block.content }}
+          >{block.content}</h4>
         );
 
       case "text":
         return (
-          <p
+          <div
             key={block.id}
             className="leading-relaxed mb-4"
             dangerouslySetInnerHTML={{ __html: block.content }}
           />
         );
+
+
 
       case "image":
         return (
@@ -203,7 +205,7 @@ const BlogPost = ({ post, loading, posts }) => {
   };
 
   return (
-    <article className="max-w-5xl mx-auto px-4 py-10 text-gray-800">
+    <article className="max-w-5xl mx-auto px-4 py-10">
       {loading ? (
         <div>Please be patient while the post loads...</div>
       ) : (
@@ -221,6 +223,13 @@ const BlogPost = ({ post, loading, posts }) => {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight capitalize">
               {post.title}
             </h1>
+            {/* <ExternalTitleLinks
+              as="h1"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight capitalize"
+              truncate={false}
+            >
+              {post.title}
+            </ExternalTitleLinks> */}
             <div className="flex items-center justify-between mb-4">
               <span
                 className={`text-xs font-semibold px-3 py-1 rounded-full text-white ${categoryBadgeClass(
@@ -255,10 +264,10 @@ const BlogPost = ({ post, loading, posts }) => {
     
             <div className="text-sm text-gray-500">
               By{" "}
-              <span className="font-medium text-gray-700">
+              <a href="/about-us#author-bio" className="font-medium text-gray-700">
                 {post.author}
-              </span>{" "}
-              • {formatDate(post.createdAt)} • {post.readTime}
+              </a>{" "}
+              • {post.createdAt} • {post.readTime}
             </div>
             <div className="my-6">
               <img

@@ -1,4 +1,5 @@
-'use client'
+// 'use client'
+import { getAllPosts } from "@/components/helpers/getPost";
 import EditorsPicks from "@/components/ui/EditorsPicks";
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
@@ -9,48 +10,32 @@ import RowFeed from "@/components/ui/RowFeed";
 import RowFeedFlat from "@/components/ui/RowFeedFlat";
 import TopBar from "@/components/ui/TopBar";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+// import { useEffect, useState } from "react";
+// import { useSelector } from "react-redux";
 
-const Home = () => {
+// Helper: Shuffle Function
+// Helper: random shuffle
+const shuffleArray = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
-  const { data: posts, postLoading, postError } = useSelector((state) => state.post);
+// HERO POSTS — ONLY latest 5 art-design posts
+const createHeroPostsData = (posts) => {
+  return [...posts]
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, 5);
+};
 
-  // Posts states to display data dynamically
-  const [heroPosts, setHeroPosts] = useState([]);
-  const [rowFeeds, setRowFeeds] = useState([]);
-  const [loading, setLoading] = useState(true)
-  const [popularPosts, setPopularPosts] = useState([])
+// ROW FEEDS — all posts randomly shuffled
+const createRowFeedsData = (posts) => shuffleArray(posts);
 
-  useEffect(() => {
-    if (!postLoading && Array.isArray(posts) && posts.length > 0) {
-      const heroes = createHeroPostsData(posts);
-      const rows = createRowFeedsData(posts);
-  
-      setHeroPosts(heroes);
-      setRowFeeds(rows);
-  
-      // Popular posts = any 10 random
-      setPopularPosts(shuffleArray(posts).slice(0, 10));
-  
-      setLoading(false);
-    }
-  }, [posts, postLoading]);
-  
 
-  // Helper: Shuffle Function
-  // Helper: random shuffle
-  const shuffleArray = (arr) => [...arr].sort(() => Math.random() - 0.5);
+export default async function Home() {
 
-  // HERO POSTS — ONLY latest 5 art-design posts
-  const createHeroPostsData = (posts) => {
-    return [...posts]
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-      .slice(0, 5);
-  };
+  const posts = await getAllPosts()
 
-  // ROW FEEDS — all posts randomly shuffled
-  const createRowFeedsData = (posts) => shuffleArray(posts);
+  const loading = false;
+  const heroPosts = createHeroPostsData(posts);
+  const rowFeeds = createRowFeedsData(posts);
+  const popularPosts = shuffleArray(posts).slice(0, 10) 
 
   return (
     <div className="font-sans bg-background text-foreground min-h-screen relative">
@@ -91,4 +76,4 @@ const Home = () => {
   );
 }
 
-export default Home
+// export default Home

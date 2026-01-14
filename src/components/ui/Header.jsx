@@ -41,7 +41,7 @@ export default function Header({ post }) {
           */}
           {/* Logo */}
           <Link href="/" className="relative lg:text-5xl md:text-4xl text-2xl font-extrabold">
-            <span className="text-[#2F4F3E] tracking-wide">Greenlytic</span>
+            <span className="text-[#2F4F3E] tracking-wide">TradingFarms</span>
 
             {/* Subtle accent stroke */}
             {/* <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#2F4F3E]/70"></span> */}

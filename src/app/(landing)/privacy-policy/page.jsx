@@ -3,9 +3,9 @@ import Header from "@/components/ui/Header";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy - Greenlytic: Sustainability, Climate & DIY Insights",
+  title: "Privacy Policy - TradingFarms: Sustainability, Climate & DIY Insights",
   description:
-    "Read Greenlytic’s Privacy Policy to learn how we collect, use, and protect your data while providing insights on green finance, ESG, climate tech, energy innovation, sustainable living, and DIY home improvement.",
+    "Read TradingFarms’s Privacy Policy to learn how we collect, use, and protect your data while providing insights on green finance, ESG, climate tech, energy innovation, sustainable living, and DIY home improvement.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
                         <span>Privacy <span className="text-[#2F4F3E]">Policy</span></span>
                     </h1>
                     <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
-                        Your privacy matters to us. Learn how Greenlytic collects, protects, and uses your
+                        Your privacy matters to us. Learn how TradingFarms collects, protects, and uses your
                         information responsibly.
                     </p>
                 </div>
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
                             1. Introduction
                         </h2>
                         <p>
-                            Welcome to <strong className="text-[#2F4F3E]">Greenlytic</strong> — is a sustainability-focused platform blending research, data, and practical guidance. This Privacy Policy explains how we handle your personal
+                            Welcome to <strong className="text-[#2F4F3E]">TradingFarms</strong> — is a sustainability-focused platform blending research, data, and practical guidance. This Privacy Policy explains how we handle your personal
                             information when you visit our website, subscribe to our updates, or interact with our
                             content and services.
                         </p>
@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
                             5. Data Security
                         </h2>
                         <p>
-                            At Greenlytic, we take your data security seriously. We use encryption and secure
+                            At TradingFarms, we take your data security seriously. We use encryption and secure
                             protocols to protect your information from unauthorized access, alteration, or misuse.
                         </p>
                     </section>
@@ -124,11 +124,17 @@ export default function PrivacyPolicyPage() {
                         <p>
                             If you have any questions or concerns about this Privacy Policy, feel free to contact
                             us at{" "}
+                            {/* <a
+                                href="mailto:contact@.com"
+                                className=""
+                            >
+                                contact@TradingFarms.com
+                            </a> */}
                             <a
-                                href="mailto:contact@greenlytic.com"
+                                href="mailto:contactyieldnvest@gmail.com"
                                 className="text-[#2F4F3E] hover:underline"
                             >
-                                contact@greenlytic.com
+                                contactyieldnvest@gmail.com
                             </a>
                             .
                         </p>
@@ -139,7 +145,7 @@ export default function PrivacyPolicyPage() {
                             10. Google AdSense & Advertising Partners
                         </h2>
                         <p>
-                            Greenlytic uses Google AdSense to display advertisements. Google may use
+                            TradingFarms uses Google AdSense to display advertisements. Google may use
                             cookies, including the DART cookie, to serve personalized ads based on your
                             visits to our website and other sites across the internet.
                         </p>

@@ -12,8 +12,8 @@ const PostPageContent = ({ pagePost }) => {
   const pathname = usePathname();
   const { data: posts, postLoading } = useSelector((state) => state.post);
 
-  const [post, setPost] = useState({});
-  const [loading, setLoading] = useState(true);
+  const post = pagePost;
+  const [loading, setLoading] = useState(false);
 
   const slug = pathname.split("/").pop();
 
@@ -38,12 +38,12 @@ const PostPageContent = ({ pagePost }) => {
   //   }
   // }, [posts, postLoading, slug]);
 
-  useEffect(() => {
-    setTimeout(() => {
-        setPost(pagePost);
-        setLoading(false);
-    }, 3000);
-  }, [slug]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //       setPost(pagePost);
+  //       setLoading(false);
+  //   }, 3000);
+  // }, [slug]);
 
 //   useEffect(() => {
 //     if (post?.title) {

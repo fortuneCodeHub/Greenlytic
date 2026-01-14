@@ -3,6 +3,7 @@ import PostPageContent from "@/components/ui/PostPageContent";
 import Head from "next/head";
 // import Script from "next/script";
 import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   try {
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.excerpt,
       keywords: post.keywords || [
-        "Greenlytic",
+        "TradingFarms",
         "sustainability blog",
         "sustainable living insights",
         "eco friendly lifestyle",
@@ -85,7 +86,7 @@ export async function generateMetadata({ params }) {
     console.error("Metadata error:", err);
 
     return {
-      title: "Post not found | Greenlytic",
+      title: "Post not found | tradingfarms",
       description: "This post is unavailable.",
     };
   }
@@ -99,6 +100,8 @@ const PostPage = async ({ params }) => {
 
   const post = await getPostById(id)
 
+  if (!post) redirect("/invalid")
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -110,17 +113,17 @@ const PostPage = async ({ params }) => {
     author: {
       "@type": "Developer",
       "name": "Fortune",
-      url: "https://www.greenlytic.com/",
+      url: "https://www.tradingfarms.online/",
     },
     publisher: {
       "@type": "Self-employed",
-      "name": "Greenlytic",
+      "name": "TradingFarms",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.greenlytic.com/opengraph-image.png",
+        "url": "https://www.tradingfarms.online/opengraph-image.png",
       },
     },
-    url: `https://www.greenlytic.com/post/${post._id}`,
+    url: `https://www.tradingfarms.online/post/${post._id}`,
   };
 
   return (
