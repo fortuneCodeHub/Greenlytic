@@ -70,7 +70,7 @@ export default async function Home() {
       {/* <EditorsPicks posts={editorsPicks} loading={loading} /> */}
       {/* Row Feed */}
       {/* <RowFeed posts={rowFeeds} popularPosts={popularPosts} loading={loading} /> */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <RowFeedFlat posts={rowFeeds} popularPosts={popularPosts} loading={loading} />
       </Suspense>
       {/* Footer */}
