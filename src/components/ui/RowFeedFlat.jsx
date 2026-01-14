@@ -34,7 +34,7 @@ const RowFeedFlat = ({
 
   // const searchParams = useSearchParams();
 
-  console.log(paginatedArticles);
+  // console.log(paginatedArticles);
   
 
   const router = useRouter();
