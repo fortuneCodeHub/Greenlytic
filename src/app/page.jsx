@@ -10,6 +10,7 @@ import RowFeed from "@/components/ui/RowFeed";
 import RowFeedFlat from "@/components/ui/RowFeedFlat";
 import TopBar from "@/components/ui/TopBar";
 import Image from "next/image";
+import { Suspense } from "react";
 // import { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 
@@ -69,7 +70,9 @@ export default async function Home() {
       {/* <EditorsPicks posts={editorsPicks} loading={loading} /> */}
       {/* Row Feed */}
       {/* <RowFeed posts={rowFeeds} popularPosts={popularPosts} loading={loading} /> */}
-      <RowFeedFlat posts={rowFeeds} popularPosts={popularPosts} loading={loading} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <RowFeedFlat posts={rowFeeds} popularPosts={popularPosts} loading={loading} />
+      </Suspense>
       {/* Footer */}
       <Footer />
     </div>
