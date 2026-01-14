@@ -16,7 +16,7 @@ import { Suspense } from "react";
 
 // Helper: Shuffle Function
 // Helper: random shuffle
-const shuffleArray = (arr) => [...arr].sort(() => Math.random() - 0.5);
+// const shuffleArray = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
 // HERO POSTS — ONLY latest 5 art-design posts
 const createHeroPostsData = (posts) => {
@@ -26,17 +26,42 @@ const createHeroPostsData = (posts) => {
 };
 
 // ROW FEEDS — all posts randomly shuffled
-const createRowFeedsData = (posts) => shuffleArray(posts);
+// const createRowFeedsData = (posts) => shuffleArray(posts);
 
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
 
   const posts = await getAllPosts()
 
-  const loading = false;
   const heroPosts = createHeroPostsData(posts);
-  const rowFeeds = createRowFeedsData(posts);
-  const popularPosts = shuffleArray(posts).slice(0, 10) 
+
+  const { category, search, page } = await searchParams
+
+  const selectedCategory = category || "All";
+  const searchTerm = search || "";
+  const currentPage = Number(page || 1);
+  const perPage = 15;
+
+  // Fetch all posts server-side
+  const allPosts = posts
+
+  // Filter posts server-side
+  const filteredPosts = allPosts.filter((p) => {
+    const matchCategory = selectedCategory === "All" || p.category === selectedCategory;
+    const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchCategory && matchSearch;
+  });
+
+  const totalPages = Math.ceil(filteredPosts.length / perPage);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * perPage,
+    currentPage * perPage
+  );
+
+  // Popular posts (server-side)
+  const popularPosts = allPosts
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 10);
 
   return (
     <div className="font-sans bg-background text-foreground min-h-screen relative">
@@ -71,7 +96,17 @@ export default async function Home() {
       {/* Row Feed */}
       {/* <RowFeed posts={rowFeeds} popularPosts={popularPosts} loading={loading} /> */}
       <Suspense>
-        <RowFeedFlat posts={rowFeeds} popularPosts={popularPosts} loading={loading} />
+        <RowFeedFlat 
+          // posts={rowFeeds} popularPosts={popularPosts} loading={loading} 
+          feedName="All"
+          paginatedArticles={paginatedPosts}
+          popularPosts={popularPosts}
+          currentPage={currentPage}
+          perPage={perPage}
+          selectedCategory={selectedCategory}
+          searchTerm={searchTerm}
+          totalPages={totalPages}
+        />
       </Suspense>
       {/* Footer */}
       <Footer />

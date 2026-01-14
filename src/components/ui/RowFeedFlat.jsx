@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import truncateText from "../helpers/truncateText";
 
 
@@ -21,30 +21,26 @@ function categoryBadgeClass(category = "") {
   }
 }
 
-const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], perPage = 15 }) => {
+const RowFeedFlat = ({ 
+  feedName,
+  paginatedArticles = [],
+  popularPosts = [],
+  currentPage,
+  perPage,
+  selectedCategory,
+  searchTerm,
+  totalPages 
+}) => {
 
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
-  const selectedCategory = searchParams.get("category") || "All";
-  const searchTerm = searchParams.get("search") || "";
-  const currentPage = Number(searchParams.get("page") || 1);
+  console.log(paginatedArticles);
+  
 
   const router = useRouter();
   const [bookmarked, setBookmarked] = useState({});
 
-  // Filter + paginate on server
-  const filteredPosts = posts.filter((p) => {
-    const matchCategory = selectedCategory === "All" || p.category === selectedCategory;
-    const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchCategory && matchSearch;
-  });
-
-  const totalPages = Math.ceil(filteredPosts.length / perPage);
-  const paginatedArticles = filteredPosts.slice(
-    (currentPage - 1) * perPage,
-    currentPage * perPage
-  );
-
+  
   function toggleBookmark(id) {
     setBookmarked((prev) => ({ ...prev, [id]: !prev[id] }));
   }
@@ -110,9 +106,9 @@ const RowFeedFlat = ({ feedName, posts = [], popularPosts = [], perPage = 15 }) 
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold mb-6 capitalize">
+          {/* <h2 className="text-2xl font-bold mb-6 capitalize">
             All {feedName && feedName} Posts
-          </h2>
+          </h2> */}
 
           <div className="space-y-6">
             {paginatedArticles.length > 0 ? (
